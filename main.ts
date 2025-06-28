@@ -7,11 +7,11 @@
  * use for RGB-LED
  */
 enum COLOR {
-    red,
-    green,
-    blue,
-    white,
-    black
+    vermelho,
+    verde,
+    azul,
+    branco,
+    preto
 }
 /**
  * use for control motor
@@ -225,34 +225,34 @@ namespace k_Bit {
     /**
      * set the rgb-led color via the color card
      */
-    //% block="set RGBled $col"
+    //% block="setar RGBled na cor $col"
     //% group="RGB-led" weight=78
     export function Led(col: COLOR) {
         if (!PCA9685_Initialized) {
             init_PCA9685();
         }
 
-        if (col == COLOR.red) {
+        if (col == COLOR.vermelho) {
             setPwm(5, 0, 4095);
             setPwm(6, 0, L_brightness);
             setPwm(4, 0, 4095);
             }
-        if (col == COLOR.green) {
+        if (col == COLOR.verde) {
             setPwm(5, 0, L_brightness);
             setPwm(6, 0, 4095);
             setPwm(4, 0, 4095);
             }
-        if (col == COLOR.blue) {
+        if (col == COLOR.azul) {
             setPwm(5, 0, 4095);
             setPwm(6, 0, 4095);
             setPwm(4, 0, L_brightness);
             }
-        if (col == COLOR.white) {
+        if (col == COLOR.branco) {
             setPwm(5, 0, L_brightness);
             setPwm(6, 0, L_brightness);
             setPwm(4, 0, L_brightness);
         }
-        if (col == COLOR.black) {
+        if (col == COLOR.preto) {
             setPwm(5, 0, 4095);
             setPwm(6, 0, 4095);
             setPwm(4, 0, 4095);
@@ -261,7 +261,7 @@ namespace k_Bit {
     /**
      * set the rgb-led color via data
      */
-    //% block=" set RGBled R:$red G:$green B:$blue"
+    //% block=" setar RGBled R:$red G:$green B:$blue"
     //% red.min=0 red.max=255 green.min=0 green.max=255 blue.min=0 blue.max=255
     //% group="RGB-led" weight=77
     export function SetLed(red: number, green: number, blue: number) {
