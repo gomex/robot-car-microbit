@@ -261,17 +261,17 @@ namespace k_Bit {
     /**
      * set the rgb-led color via data
      */
-    //% block=" setar RGBled R:$red G:$green B:$blue"
-    //% red.min=0 red.max=255 green.min=0 green.max=255 blue.min=0 blue.max=255
+    //% block=" setar RGBled R:$vermelho G:$verde B:$azul"
+    //% vermelho.min=0 vermelho.max=255 verde.min=0 verde.max=255 azul.min=0 azul.max=255
     //% group="RGB-led" weight=77
-    export function SetLed(red: number, green: number, blue: number) {
+    export function SetLed(vermelho: number, verde: number, azul: number) {
         if (!PCA9685_Initialized) {
             init_PCA9685();
         }
 
-        let R = Math.map(red, 0, 255, 4095, L_brightness);
-        let G = Math.map(green, 0, 255, 4095, L_brightness);
-        let B = Math.map(blue, 0, 255, 4095, L_brightness);
+        let R = Math.map(vermelho, 0, 255, 4095, L_brightness);
+        let G = Math.map(verde, 0, 255, 4095, L_brightness);
+        let B = Math.map(azul, 0, 255, 4095, L_brightness);
 
         setPwm(6, 0, R);
         setPwm(5, 0, G);
@@ -280,7 +280,7 @@ namespace k_Bit {
     /**
      * turn off all rgb-led
      */
-    //% block="turn off RGB-led"
+    //% block="desligar RGB-led"
     //% group="RGB-led" weight=76
     export function OFFLed() {
         if (!PCA9685_Initialized) {
@@ -298,7 +298,7 @@ namespace k_Bit {
      */
     pins.setPull(DigitalPin.P2, PinPullMode.PullNone);
     pins.setPull(DigitalPin.P11, PinPullMode.PullNone);
-    //% block="$LR obstacle sensor "
+    //% block="sensor do segue linha no $LR"
     //% group="Sensor" weight=69
     export function obstacle(LR: MotorObs): number {
         let val;
@@ -317,7 +317,7 @@ namespace k_Bit {
      */
     pins.setPull(DigitalPin.P12, PinPullMode.PullNone);
     pins.setPull(DigitalPin.P13, PinPullMode.PullNone);
-    //% block="Line Tracking"
+    //% block="Segue linha"
     //% group="Sensor" weight=68
     export function LineTracking(): number {
         let val = pins.digitalReadPin(DigitalPin.P12) << 0 | pins.digitalReadPin(DigitalPin.P13) << 1;
@@ -330,7 +330,7 @@ namespace k_Bit {
     const ECHO_PIN = DigitalPin.P15;
     pins.setPull(TRIG_PIN, PinPullMode.PullNone);
     let lastTime = 0;
-    //% block="Ultrasonic"
+    //% block="Ultrasonico"
     //% group="Sensor" weight=67
     export function ultra(): number {
         //send trig pulse
