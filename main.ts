@@ -114,7 +114,7 @@ namespace k_Bit {
     //% block="carro $direction velocidade: $speed \\%"
     //% speed.min=0 speed.max=100
     //% group="Motor" weight=99
-    export function run(direction: DIR, speed: number, time: number) {
+    export function run(direction: DIR, speed: number) {
         if (!PCA9685_Initialized) {
             init_PCA9685();
         }
@@ -145,10 +145,6 @@ namespace k_Bit {
                 setPwm(2, 0, 4095);
                 break;
             default: break;
-        }
-        if (time > 0) {
-            basic.pause(time);
-            carStop();
         }
     }
     /**
