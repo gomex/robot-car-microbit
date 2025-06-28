@@ -17,21 +17,21 @@ enum COLOR {
  * use for control motor
  */
 enum DIR {
-    RunForward = 0,
-    RunBack = 1,
-    TurnLeft = 2,
-    TurnRight = 3
+    AndaParaFrente = 0,
+    AndaParaTras = 1,
+    ViraEsquerda = 2,
+    ViraDireita = 3
 }
 /**
  * use for motor and infrared obstacle sensor
  */
 enum MotorObs {
-    LeftSide = 0,
-    RightSide = 1
+    LadoEsquerdo = 0,
+    LadoDireito = 1
 }
 enum MotorDir {
-    Forward = 0,
-    Back = 1
+    Frente = 0,
+    Tras = 1
 }
 
 
@@ -111,7 +111,7 @@ namespace k_Bit {
     /**
      * car run diretion
      */
-    //% block="car $direction speed: $speed \\%"
+    //% block="carro $direction velocidade: $speed \\%"
     //% speed.min=0 speed.max=100
     //% group="Motor" weight=99
     export function run(direction: DIR, speed: number) {
@@ -150,7 +150,7 @@ namespace k_Bit {
     /**
      * set cat state
      */
-    //% block="car stop"
+    //% block="carro para"
     //% group="Motor" weight=98
     export function carStop() {
         if (!PCA9685_Initialized) {
@@ -162,7 +162,7 @@ namespace k_Bit {
     /**
      * set speed of motor
      */
-    //% block="$M motor run $MD speed: $speed \\%"
+    //% block="$M motor roda para $MD na velocidade: $speed \\%"
     //% speed.min=0 speed.max=100
     //% group="Motor" weight=97
     export function Motor(M: MotorObs, MD: MotorDir, speed: number) {
@@ -192,7 +192,7 @@ namespace k_Bit {
     /**
      * set motor state
      */
-    //% block="$M motor stop"
+    //% block="$M motor para"
     //% group="Motor" weight=96
     export function MotorSta(M: MotorObs) {
         if (!PCA9685_Initialized) {
@@ -213,7 +213,7 @@ namespace k_Bit {
      * set rgb-led brightness
      */
     let L_brightness = 4095;  //control the rgb-led brightness
-    //% block="LED brightness $br"
+    //% block="LED brilha $br"
     //% br.min=0 br.max=255
     //% group="RGB-led" weight=79
     export function LED_brightness(br: number) {
