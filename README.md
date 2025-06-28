@@ -1,57 +1,90 @@
+## Versão em Português do Brasil
 
-> 在 [https://mworkfun.github.io/pxt-k-bit/](https://mworkfun.github.io/pxt-k-bit/) 打开此页面
+> Abra esta página em [https://gomex.github.io/robot-car-microbit/](https://gomex.github.io/robot-car-microbit/)
 
-## 用作扩展
+## Usar como Extensão
 
-此仓库可以作为 **插件** 添加到 MakeCode 中。
+Este repositório pode ser adicionado ao MakeCode como um **plugin**.
 
-* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 点击 **新项目**
-* 点击齿轮图标菜单下的 **扩展**
-* 搜索 **https://github.com/mworkfun/pxt-k-bit** 并导入
+* Abra [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* Clique em **Novo Projeto**
+* Clique em **Extensões** no menu do ícone de engrenagem
+* Pesquise por **https://github.com/gomex/robot-car-microbit** e importe
 
-## 编辑此项目 ![构建状态标志](https://github.com/mworkfun/pxt-k-bit/workflows/MakeCode/badge.svg)
+## Editar este Projeto ![Selo de Status de Build](https://github.com/gomex/robot-car-microbit/workite este repositório no MakeCode.
 
-在 MakeCode 中编辑此仓库。
+* Abra [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* Clique em **Importar**, depois clique em **Importar URL**
+* Cole **https://github.com/gomex/robot-car-microbit** e clique em Importar
 
-* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 点击 **导入**，然后点击 **导入 URL**
-* 粘贴 **https://github.com/mworkfun/pxt-k-bit** 并点击导入
+## Pré-visualização dos Blocos
 
-## 积木块预览
+Esta imagem mostra o código dos blocos do último commit no branch principal.
+Pode levar alguns minutos para a imagem ser atualizada.
 
-此图像显示主分支中最后一次提交的块代码。
-此图像可能需要几分钟才能刷新。
+![Visualização dos Blocos](https://github.com/gomex/robot-car-microbit/raw/master/.github/makecode/adados (para busca, renderização)
 
-![块的渲染视图](https://github.com/mworkfun/pxt-k-bit/raw/master/.github/makecode/blocks.png)
+* para PXT/microbit
+makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");
 
-#### 元数据 (用于搜索、渲染)
+#### Tutoriais
+
+- O receptor IR usa P16
+- O buzzer usa P0
+- O ultrassônico usa P14 (Trig) e P15 (Echo)
+- O sensor de fotorresistência usa P1
+- O LED F5-RGB é controlado pelos pinos ledPin4-6 do PCA9685
+- O LED RGB WS2812 usa P8
+- O sensor de desvio de obstáculos esquerdo usa P2
+- O sensor de desvio de obstáculos direito usa P11
+- O sensor de linha esquerda usa P12
+- O sensor de linha direita usa P13
+- O motor esquerdo é controlado pelo PCA9685 ledPin0 (direção) e ledPin1 (velocidade)
+- O motor direito é controlado pelo PCA9685 ledPin2 (direção) e ledPin3 (velocidade)
+
+Se precisar de ajustes ou de formatação específica, é só avisar!
+
+## English Version
+
+> Open this page at [https://gomex.github.io/robot-car-microbit/](https://gomex.github.io/robot-car-microbit/)
+
+## Use as Extension
+
+This repository can be added to MakeCode as a **plugin**.
+
+* Open [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* Click **New Project**
+* Click **Extensions** in the gear icon menu
+* Search for **https://github.com/gomex/robot-car-microbit** and import it
+
+## Edit this Project ![Build Status Badge](https://github.com/gomex/robot-car-microbit/workflows this repository in MakeCode.
+
+* Open [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* Click **Import**, then click **Import URL**
+* Paste **https://github.com/gomex/robot-car-microbit** and click Import
+
+## Block Preview
+
+This image shows the block code from the latest commit in the main branch.
+It may take a few minutes for this image to refresh.
+
+![Block Render View](https://github.com/gomex/robot-car-microbit/raw/master/.github/makecode/blocks.png (for search, rendering)
 
 * for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");
 
-#### tutorials
+#### Tutorials
 
-IR receiver uses P16
+- IR receiver uses P16
+- Buzzer uses P0
+- Ultrasonic uses P14 (Trig) and P15 (Echo)
+- Photoresistance uses P1
+- F5-RGB-LED is controlled by ledPin4-6 of PCA9685
+- WS2812 RGB-LED uses P8
+- Left obstacle avoidance sensor uses P2
+- Right obstacle avoidance sensor uses P11
+- Left check line sensor uses P12
+- Right check line sensor uses P13
+- Left motor is controlled by PCA9685 ledPin0 (direction) and ledPin1 (speed)
+- Right motor is controlled by PCA9685 ledPin2 (direction) and ledPin3 (speed)
 
-buzzer uses P0
-
-Ultrasonic uses P14(Trig) and P15(Echo)
-
-photoresistance uses P1
-
-F5-RGB-LED is controlled by ledPin4-6 of PCA9685
-
-WS2812 RGB-LED uses P8
-
-left Obstacle avoidance sensor uses P2
-
-right Obstacle avoidance sensor uses P11
-
-left check line sensor uses P12
-
-right check line sensor uses P13
-
-left motor is controlled by PCA9685 ledPin0(direction) and ledPin1(speed).
-
-right motor is controlled by PCA9685 ledPin2(direction) and ledPin3(speed).
